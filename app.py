@@ -209,7 +209,7 @@ if __name__ == '__main__':
 
         lookback = st.slider("Lookback days (Long Term)", min_value=7, max_value=365, value=15)
 
-        threshold = st.slider("Select a value", min_value=0.0, max_value=0.3, value=0.05)
+        threshold = st.slider("Threshold", min_value=0.0, max_value=0.3, value=0.05)
 
         show_data = st.checkbox('Show data table', False)
         st.form_submit_button('Apply')
