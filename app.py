@@ -229,4 +229,4 @@ if __name__ == '__main__':
     
     if show_data:
         st.markdown('---')
-        st.dataframe(df_result.tail())
+        st.dataframe(df_result.tail(50))
