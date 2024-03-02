@@ -127,7 +127,7 @@ def visualize(selected_pool, data, lookback, selected_price):
 
     # Create a reference line for the original close prices
     reference_line = go.Scatter(x=data.index,
-                                y=data.Close,
+                                y=data[selected_price],
                                 mode="lines",
                                 line=go.scatter.Line(color="gray"),
                                 showlegend=True, name=f"{selected_price} Price")
