@@ -204,12 +204,13 @@ if __name__ == '__main__':
 
     with st.sidebar.form('settings_form'):        
         strategy = st.selectbox("Select Strategy", strategy, index=0)
-        selected_price = st.selectbox("Select Price", prices)
-        lookback = st.slider("Lookback days (Long Term)", 7, 1500)
-
-        threshold = st.slider("Threshold", 0.0, 0.2)
-        #print(threshold)
         
+        selected_price = st.selectbox("Select Price", prices, index=0)
+
+        lookback = st.slider("Lookback days (Long Term)", min_value=7, max_value=365, value=15)
+
+        threshold = st.slider("Select a value", min_value=0.0, max_value=0.3, value=0.05)
+
         show_data = st.checkbox('Show data table', False)
         st.form_submit_button('Apply')
     
